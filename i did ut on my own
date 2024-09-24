@@ -1,0 +1,16 @@
+// any import statements go here!
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // Your code goes here!
+        Scanner sc = new Scanner(System.in);
+        int check;
+        int age;
+        System.out.print("input year of birth");
+        check = sc.nextInt();
+        System.out.print("input age");
+        age = sc.nextInt();
+        System.out.print(((check*2 + 5)*50 + age - 250)/100 );
+        // Yout code stops here!
+    }
+}
