@@ -1,0 +1,28 @@
+Original file line number	Diff line number	Diff line change
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication2;
+import java.lang.Math;
+import java.util.Scanner;
+/**
+ *
+ * @author 861644
+ */
+public class JavaApplication2 {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+          Scanner sc = new Scanner(System.in);
+          int length;
+          System.out.print("input length of rectangle");
+          length = sc.nextInt();
+          int width;
+          System.out.print("input width of rectangle");
+          width = sc.nextInt();
+          System.out.print(width*length);
+          
