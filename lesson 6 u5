@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner kbd = new Scanner(System.in);
+
+        System.out.print("Hi. Please enter a greeting in one word: ");
+        String oneWord = kbd.next();
+        kbd.nextLine(); // Consume the remaining line
+        System.out.println("You said: " + oneWord + ".");
+
+        System.out.print("Hi. Please enter a greeting in more than one word: ");
+        String moreThanOneWord = kbd.nextLine();
+        System.out.println("You said: " + moreThanOneWord + ".");
+
+       
+    }
+}
