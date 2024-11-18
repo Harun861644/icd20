@@ -1,0 +1,19 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Calc {
+    public static void main(String[] args) {
+        // Your code goes here!
+        Scanner scan = new Scanner(System.in);
+        int a = 7;
+        int b = 4;
+        System.out.print("Enter an operator (+, -, *, or /)");
+        String op = scan.next();
+        // One example of a comparison:
+        if (op.equals("+")) {
+        System.out.println(a + b);
+}
+        
+       // Yout code stops here!
+    }
+}
