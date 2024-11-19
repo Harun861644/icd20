@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class marks {
+   public static void main(String [] args) {
+      // enter your code here!
+      Scanner scan = new Scanner(System.in);
+      System.out.print("enter percentage mark");
+      int mark =  scan.nextInt();
+      if (mark >= 80 ) {
+      System.out.print("a");
+      } else if (mark >= 70) {
+      System.out.print("b");
+      } else if(mark >= 60) {
+      System.out.print("c");
+      } else if(mark >= 50) {
+      System.out.print("d");
+      } else if (mark <= 49) {
+      System.out.print("f");  
+      } else if (mark > 100) {
+      System.out.print("invalid");  
+      }
+   }
+}
