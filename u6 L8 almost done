@@ -1,0 +1,13 @@
+import java.lang.Math;
+
+import java.lang.Math;
+
+class table {
+    public static void main(String [] args) {
+      System.out.print( "x", "sqrt(x)", "x^2", "x^3");ysss
+        for (int x = 0; x < 11; x++) {
+            double sr = Math.sqrt(x);
+            System.out.printf("%2d %6.4f\n", x, sr);
+        }
+    }
+}
