@@ -1,0 +1,43 @@
+package javaapplication5;
+import java.util.Scanner;
+
+public class JavaApplication5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = 0;
+        
+        do {
+            System.out.print("Enter a whole number > 0: ");
+            n = sc.nextInt();
+            int terms = 1; // Count how many numbers we process
+            int highestNumber = n; // Start with the input number
+            
+            while (n != 1) {
+                if (n % 2 == 0) {  
+                    n = n / 2; // If even, divide by 2
+                } else {
+                    n = 3 * n + 1; // If odd, calculate 3n + 1
+                }
+                
+                if (n > highestNumber) {
+                    highestNumber = n; // Update the highest number if necessary
+                } 
+                
+                System.out.printf("%,d; ", n); // Print the current number
+                
+                terms++; // Increment the count of processed numbers
+            }
+            
+            System.out.println("\nThe highest number: " + highestNumber);
+            System.out.println("Total numbers processed: " + terms);
+            
+            System.out.print("Do another (y/n)? ");
+            String doAnother = sc.next(); // Get user input for repeat
+            
+        } while (n > 0 && !doAnother.equalsIgnoreCase("n")); // Continue if user wants to repeat
+    }
+    
+    private static Object nextline() {
+        throw new UnsupportedOperationException("Not supported yet."); // Placeholder method
+    }
+}
