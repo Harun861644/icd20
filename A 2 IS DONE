@@ -1,0 +1,63 @@
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication5;
+import java.util.Scanner;
+/**
+ *
+ * @author 861644
+ */
+public class JavaApplication5 {
+
+    private static String taccccerms;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+            // declare terms, n and char
+            int term = 1;
+            int n = 0;
+            char repeat;
+            //do while loop
+            do  {
+                // Ask for number
+                System.out.print("Enter a whole number > 0: ");
+                n = sc.nextInt();
+                int terms = 1;
+                int highestNumber = n;
+                //does loop when n not equal to 1
+                while (n != 1) {
+                    if (n % 2 == 0) {  
+                        n = n / 2;
+                    }else {
+                         n= 3*n + 1;
+                    }
+                    if (n > highestNumber) {
+                        highestNumber = n;
+                    } // declare terms
+                    terms = terms + 1;
+                    //terms raised by 1 each time
+                    System.out.printf("%,d; ",n);
+                }//while
+                // print out terms, highest number, and do another
+                System.out.println();
+                System.out.println("Terms: " + terms);
+                System.out.println("Highest Number: " + highestNumber);
+                System.out.print("Do another (y/n)? ");
+                String another = sc.next().toLowerCase();
+                repeat = another.charAt(0);
+          //end of do while      
+            }while(repeat !='n');
+            
+    }
+
+    private static Object nextline() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of ge7nerated methods, choose Tools | Templates.
+    }
+    
+}
