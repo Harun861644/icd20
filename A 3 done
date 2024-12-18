@@ -1,0 +1,71 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication6;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author 861644
+ */
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+             Scanner scan = new Scanner(System.in); // For user input
+        int playerWins = 0, computerWins = 0, ties = 0; // Score counters
+        
+        System.out.print("How many games? "); // Ask for number of games
+        int totalGames = scan.nextInt();
+        scan.nextLine(); // Clear the input buffer
+        
+        for (int game = 1; game <= totalGames; game++) { // Loop through each game
+            System.out.print("Enter your choice (r/p/s): "); // Get player's choice
+            char playerChoice = scan.nextLine().toLowerCase().charAt(0);
+            
+            char computerChoice = "rps".charAt((int)(Math.random() * 3)); // Random choice for computer
+            System.out.println("Computer chose: " + computerChoice); // Show computer's choice
+            
+            // Check who wins
+            if (playerChoice == computerChoice) {
+                System.out.println("Tie!"); // It's a tie
+                ties++;
+            } else if ((playerChoice == 'r' && computerChoice == 's') ||
+                       (playerChoice == 'p' && computerChoice == 'r') ||
+                       (playerChoice == 's' && computerChoice == 'p')) {
+                System.out.println("You win!"); // Player wins
+                playerWins++;
+            } else {
+                System.out.println("Computer wins!"); // Computer wins
+                computerWins++;
+            }
+        }
+        
+        // Show final scores
+        System.out.println("\nFinal Results:");
+        System.out.println("Player wins: " + playerWins);
+        System.out.println("Computer wins: " + computerWins);
+        System.out.println("Ties: " + ties);
+        
+        // Determine overall winner
+        if (playerWins > computerWins) {
+            System.out.println("You win the series!"); // Player wins series
+        } else if (computerWins > playerWins) {
+            System.out.println("Computer wins the series!"); // Computer wins series
+        } else {
+            System.out.println("The series is a tie!"); // Series is tied
+        }
+        
+        scan.close(); // Close the scanner
+    }
+}
+
+    
+    
+
